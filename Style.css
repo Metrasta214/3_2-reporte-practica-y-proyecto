@@ -1,0 +1,175 @@
+/* Reset básico y fuentes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1617957688710-1e267d261e85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #6B7280;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background-color: #FF6F61;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-bienvenida {
+    font-size: 2.5rem;
+}
+
+.titulo-bienvenida::first-letter {
+    color: #FFD166;
+}
+
+/* Secciones generales */
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: #FF6F61;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: 2px solid #FFD166;
+    padding-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* Sección de habilidades y cualidades */
+.skills ul, .skills ol {
+    list-style-position: inside;
+    margin-left: 1rem;
+}
+
+.skills li {
+    margin: 0.5rem 0;
+    color: #6B7280;
+}
+
+/* Proyectos */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.image-container {
+    position: relative;
+    width: 300px;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+    transform: translateY(-5px);
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.info-box {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #FFD166;
+    color: #6B7280;
+    border: 1px solid #FF6F61;
+    padding: 15px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+/* Videos */
+video {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 3px solid #06D6A0;
+}
+
+/* Redes sociales */
+.social a {
+    color: #06D6A0;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.social a:hover {
+    color: #FFD166;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #1A535C;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #FFD166;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #06D6A0;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .titulo-bienvenida {
+        font-size: 1.8rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+}
